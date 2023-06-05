@@ -4,7 +4,9 @@
     box-sizing: border-box;
     background-color: black;
     font-family: 'Arapey', serif;;
-
+}
+h1, h2, h3, p {
+    background: transparent;
 }
 
 div#root {
@@ -30,6 +32,7 @@ div.rounded-circle {
   background-color: #052F32;
     transition: 0.3s ease;
     z-index: -1;
+    left: 15rem;
 }
 div.noOverFlow {
     position: absolute;
@@ -117,9 +120,66 @@ section.home {
     margin-bottom: 12rem;
 }
 
-div.container{
-    border: 1px solid red;
+section#about {
+    height: 110vh;
 }
-div#about {
-    width: 80rem;
+div.aboutContainer {
+    background-color: #1E7976;
+    height: 98vh;
+    margin: 2rem;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+div.about {
+    background-color: transparent;
+}
+h2.about {
+    color: #94FC13;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Righteous', cursive;
+}
+p {
+    font-family: 'Righteous', cursive;
+}
+div.about > p {
+    margin: 15vh 5vw;
+    font-size: 1.5rem;
+    color: #94FC13;
+}
+
+div.skill {
+    background-color: transparent;
+    color: #94FC13;
+    margin: 10px 0;
+}
+
+div.skill-item {
+    background-color: transparent;
+  align-items: center;
+}
+
+div.skill h3 {
+    font-family: 'Righteous', cursive;
+    font-size: 1.3rem;
+    margin-top: 5vh;
+
+}
+
+.line {
+  width: 50px;
+  height: 12px;
+    border-radius: 50px;
+  background-color: #76EAD7;
+}
+div.py{width: 95%;}
+div.java{width: 75%;}
+div.js{width: 75%;}
+div.cpp{width: 50%;}
+div.html{width: 80%;}
+div.css{width: 60%;}
+div.react{width: 70%;}
+div.sql{width: 50%;}
