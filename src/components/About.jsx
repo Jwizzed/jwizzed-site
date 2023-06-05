@@ -59,7 +59,7 @@ function About() {
                     <div className={"line react " + isActive}></div>
                 </div>
                 <div className="skill-item">
-                    <h3>SQL/NOSQL</h3>
+                    <h3>SQL / NOSQL</h3>
                     <div className={"line sql " + isActive}></div>
                 </div>
             </div>
