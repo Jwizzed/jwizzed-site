@@ -5,15 +5,17 @@ import FirstPage from "./FirstPage";
 import Nav from "./Nav";
 import About from "./About";
 import Project from "./Project";
+import Contact from "./Contact";
 
 function App(){
     return <div>
         <Header />
-        <Nav />
+        {/*<Nav />*/}
         <FirstPage />
         <Footer />
         <About />
         <Project />
+        <Contact />
     </div>
 }
 

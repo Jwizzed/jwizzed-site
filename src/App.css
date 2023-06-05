@@ -129,7 +129,7 @@ section#about {
     height: 110vh;
 }
 div.aboutContainer {
-    background-color: #1E7976;
+    background-color: #052F32;
     height: 98vh;
     margin: 2rem;
     border-radius: 50px;
@@ -180,14 +180,14 @@ div.skill h3 {
     border-radius: 50px;
   background-color: #76EAD7;
 }
-div.py{width: 95%;}
-div.java{width: 75%;}
-div.js{width: 75%;}
-div.cpp{width: 50%;}
-div.html{width: 80%;}
-div.css{width: 60%;}
-div.react{width: 70%;}
-div.sql{width: 50%;}
+div.py{width: 80%;}
+div.java{width: 65%;}
+div.js{width: 65%;}
+div.cpp{width: 40%;}
+div.html{width: 70%;}
+div.css{width: 65%;}
+div.react{width: 65%;}
+div.sql{width: 30%;}
 
 .title {
     position: absolute;
@@ -222,4 +222,47 @@ button.btnEq {
 
 button.btnE {
     background-color: #DB79CA;
+}
+
+section#contact {
+    margin-left: 4vw;
+}
+h2.contact {
+    font-family: 'Righteous', cursive;
+    font-size: 5rem;
+    margin-top: 5vh;
+    color: #94FC13;
+}
+form.contact {
+    display: block;
+}
+h4.mail {
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    margin-top: 5vh;
+    color: #94FC13;
+}
+button.btn {
+    margin-top: 3vh;
+    background-color: #94FC13;
+}
+div.gridContact {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    width: 100%;
+    background: transparent;
+    margin-top: 10px;
+    color: #94FC13;
+}
+img.lPic {
+    position: absolute;
+    background-color: transparent;
+    width: 50rem;
+    left: 60%;
+    top: 330vh;
+}
+svg.bi {
+    background: transparent;
+    color: #94FC13;
+    margin-right: 1vw;
 }
