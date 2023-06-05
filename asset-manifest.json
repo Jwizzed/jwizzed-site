@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/jwizzed-site/static/css/main.88ef3ae8.css",
-    "main.js": "/jwizzed-site/static/js/main.30916bd0.js",
+    "main.css": "/jwizzed-site/static/css/main.7e955951.css",
+    "main.js": "/jwizzed-site/static/js/main.8299f66f.js",
     "static/media/equalize.png": "/jwizzed-site/static/media/equalize.35aa44e58977ded86eda.png",
     "static/media/first.png": "/jwizzed-site/static/media/first.48f7c6ca418c8851db7f.png",
     "static/media/end.png": "/jwizzed-site/static/media/end.d08b835883eabb6f3acb.png",
     "static/media/elon.png": "/jwizzed-site/static/media/elon.e3cd1d9b9f9ef855019c.png",
     "static/media/mate.png": "/jwizzed-site/static/media/mate.5828e824b48468ea1127.png",
     "index.html": "/jwizzed-site/index.html",
-    "main.88ef3ae8.css.map": "/jwizzed-site/static/css/main.88ef3ae8.css.map",
-    "main.30916bd0.js.map": "/jwizzed-site/static/js/main.30916bd0.js.map"
+    "main.7e955951.css.map": "/jwizzed-site/static/css/main.7e955951.css.map",
+    "main.8299f66f.js.map": "/jwizzed-site/static/js/main.8299f66f.js.map"
   },
   "entrypoints": [
-    "static/css/main.88ef3ae8.css",
-    "static/js/main.30916bd0.js"
+    "static/css/main.7e955951.css",
+    "static/js/main.8299f66f.js"
   ]
 }
