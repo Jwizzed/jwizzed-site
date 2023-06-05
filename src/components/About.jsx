@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 
 function About() {
+    const [isActive, setIsActive] = useState("");
+    useEffect(() => {
+        const handleScroll = () => {
+          const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+          const activationPosition = 500;
+
+          if (scrollPosition >= activationPosition) {
+            setIsActive("active");
+          }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
     return <section id="about">
         <div className="aboutContainer">
             <div className="about">
@@ -12,35 +32,35 @@ function About() {
             <div className="skill">
                 <div className="skill-item">
                     <h3>Python </h3>
-                    <div className="line py"></div>
+                    <div className={"line py " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>Java</h3>
-                    <div className="line java"></div>
+                    <div className={"line java " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>JavaScript</h3>
-                    <div className="line js"></div>
+                    <div className={"line js " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>C++</h3>
-                    <div className="line cpp"></div>
+                    <div className={"line cpp " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>HTML</h3>
-                    <div className="line html"></div>
+                    <div className={"line html " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>CSS</h3>
-                    <div className="line css"></div>
+                    <div className={"line css " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>REACT</h3>
-                    <div className="line react"></div>
+                    <div className={"line react " + isActive}></div>
                 </div>
                 <div className="skill-item">
                     <h3>SQL/NOSQL</h3>
-                    <div className="line sql"></div>
+                    <div className={"line sql " + isActive}></div>
                 </div>
             </div>
         </div>

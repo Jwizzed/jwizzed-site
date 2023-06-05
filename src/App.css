@@ -180,14 +180,18 @@ div.skill h3 {
     border-radius: 50px;
   background-color: #76EAD7;
 }
-div.py{width: 80%;}
-div.java{width: 65%;}
-div.js{width: 65%;}
-div.cpp{width: 40%;}
-div.html{width: 70%;}
-div.css{width: 65%;}
-div.react{width: 65%;}
-div.sql{width: 30%;}
+
+.active {
+    transition: 1.2s ease;
+}
+div.py.active{width: 80%;}
+div.java.active{width: 65%;}
+div.js.active{width: 65%;}
+div.cpp.active{width: 40%;}
+div.html.active{width: 70%;}
+div.css.active{width: 65%;}
+div.react.active{width: 65%;}
+div.sql.active{width: 30%;}
 
 .title {
     position: absolute;
