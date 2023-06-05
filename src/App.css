@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     background-color: black;
-    font-family: 'Arapey', serif;;
+    font-family: 'Arapey', serif;
 }
+html {
+    overflow-x: hidden;
+}
+
 h1, h2, h3, p {
     background: transparent;
 }
@@ -22,6 +26,7 @@ div#root {
     position: relative;
     overflow: hidden;
     z-index: 0;
+
 
 }
 div.rounded-circle {
@@ -183,3 +188,38 @@ div.html{width: 80%;}
 div.css{width: 60%;}
 div.react{width: 70%;}
 div.sql{width: 50%;}
+
+.title {
+    position: absolute;
+    font-size: 15rem;
+    rotate: 90deg;
+    top: 250vh;
+    left: 65vw;
+    color: #94FC13;
+}
+
+.myBtn {
+    position: absolute;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 50px;
+   left: -2vw;
+    top: -5vh;
+    color: white;
+    border: transparent;
+}
+div.carousel-caption, div.carousel-indicators {
+    background: transparent;
+}
+
+button.btnM {
+    background-color: #335C74;
+}
+
+button.btnEq {
+    background-color: #3B235F;
+}
+
+button.btnE {
+    background-color: #DB79CA;
+}

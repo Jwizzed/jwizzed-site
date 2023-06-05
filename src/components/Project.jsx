@@ -32,6 +32,12 @@ function Project() {
   return (
     <div id="project" className={carouselItems[activeIndex].className}>
       <h2 className="title pt-4 mb-5">Projects</h2>
+
+      <div className="marvel-device macbook">
+        <div className="top-bar"></div>
+        <div className="camera"></div>
+        <div className="screen">
+
       <Carousel activeIndex={activeIndex} onSelect={handleSelect}>
         {carouselItems.map((item, index) => (
           <Carousel.Item key={index}>
@@ -48,6 +54,13 @@ function Project() {
           </Carousel.Item>
         ))}
       </Carousel>
+
+        </div>
+        <div className="bottom-bar"></div>
+      </div>
+
+
+
     </div>
   );
 }

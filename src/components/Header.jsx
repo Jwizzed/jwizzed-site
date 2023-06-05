@@ -15,6 +15,7 @@ function Header(){
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
                 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
 
+
     </header>;
 }
 export default Header;
