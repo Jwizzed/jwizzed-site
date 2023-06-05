@@ -1,1 +1,1 @@
-# jwizzed-site
+Portfolio website, still not responsive.
