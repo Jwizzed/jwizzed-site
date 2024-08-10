@@ -5,7 +5,8 @@ function init() {
 
     // Scene setup
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(60, 10, 0.1, 10);
+    camera.position.set(0, 1.3, 0);
     renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('modelViewer'),
         alpha: true,
@@ -19,9 +20,12 @@ function init() {
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
     directionalLight.position.set(0, 1, 0);
     scene.add(directionalLight);
+
+    const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.7);
+    scene.add(hemisphereLight);
 
     // Camera position
     camera.position.z = 5;
@@ -35,10 +39,19 @@ function init() {
     // Load the .glb model
     const loader = new THREE.GLTFLoader();
     loader.load(
-        './assets/avatar.glb',
-        function (gltf) {
-            console.log("Model loaded successfully");
-            model = gltf.scene;
+    './assets/avatar.glb',
+    function (gltf) {
+        model = gltf.scene;
+
+        model.traverse((child) => {
+            if (child.isMesh) {
+                child.material.color.setHex(0xffffff);
+                child.material.emissive.setHex(0x333333);
+                child.material.emissiveIntensity = 0.2;
+                child.material.metalness = 0.1;
+                child.material.roughness = 0.5;
+            }
+        });
 
             // Center the model
             const box = new THREE.Box3().setFromObject(model);
@@ -46,9 +59,8 @@ function init() {
             model.position.sub(center);
 
             // Scale the model to a fixed size
-            const scale = 2 / box.getSize(new THREE.Vector3()).length();
+            const scale = box.getSize(new THREE.Vector3()).length() * 1.2;
             model.scale.set(scale, scale, scale);
-
             scene.add(model);
             console.log("Model added to scene");
 
