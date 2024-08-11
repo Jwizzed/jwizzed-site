@@ -39,19 +39,19 @@ function init() {
     // Load the .glb model
     const loader = new THREE.GLTFLoader();
     loader.load(
-    './assets/avatar.glb',
-    function (gltf) {
-        model = gltf.scene;
+        './assets/avatar.glb',
+        function (gltf) {
+            model = gltf.scene;
 
-        model.traverse((child) => {
-            if (child.isMesh) {
-                child.material.color.setHex(0xffffff);
-                child.material.emissive.setHex(0x333333);
-                child.material.emissiveIntensity = 0.2;
-                child.material.metalness = 0.1;
-                child.material.roughness = 0.5;
-            }
-        });
+            model.traverse((child) => {
+                if (child.isMesh) {
+                    child.material.color.setHex(0xffffff);
+                    child.material.emissive.setHex(0x333333);
+                    child.material.emissiveIntensity = 0.2;
+                    child.material.metalness = 0.1;
+                    child.material.roughness = 0.5;
+                }
+            });
 
             // Center the model
             const box = new THREE.Box3().setFromObject(model);
@@ -96,18 +96,33 @@ function onWindowResize() {
 function animate() {
     requestAnimationFrame(animate);
     if (model) {
-        const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-        model.rotation.y = scrollPercent * Math.PI * 2;
+        model.rotation.y += 0.005;
     }
     renderer.render(scene, camera);
 }
 
-// Handle scrolling
-window.addEventListener('scroll', function() {
-    if (model) {
-        const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-        model.rotation.y = scrollPercent * Math.PI * 2;
-    }
-});
+document.addEventListener('DOMContentLoaded', function() {
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        scrollHorizontally: true,
+        navigation: true,
+        navigationPosition: 'right',
+        showActiveTooltip: true,
+        anchors: ['home_', 'about_', 'skills_', 'experience_', 'education_', 'projects_', 'contact_'],
+        scrollingSpeed: 700, // Adjust the scrolling speed as needed
+        afterLoad: function(origin, destination, direction) {
+            window.location.hash = destination.anchor;
 
-init();
+            // Fade in effect
+            destination.item.style.opacity = 0;
+            setTimeout(function() {
+                destination.item.style.transition = 'opacity 1s';
+                destination.item.style.opacity = 1;
+            }, 100);
+        },
+        onLeave: function(origin, destination, direction) {
+        }
+    });
+
+    init();
+});
