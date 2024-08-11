@@ -82,7 +82,6 @@ function init() {
     window.addEventListener('resize', onWindowResize, false);
     onWindowResize();
 
-    // Start animation loop immediately (will show the cube until model loads)
     animate();
 }
 
@@ -109,19 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navigationPosition: 'right',
         showActiveTooltip: true,
         anchors: ['home_', 'about_', 'skills_', 'experience_', 'education_', 'projects_', 'contact_'],
-        scrollingSpeed: 700, // Adjust the scrolling speed as needed
-        afterLoad: function(origin, destination, direction) {
-            window.location.hash = destination.anchor;
-
-            // Fade in effect
-            destination.item.style.opacity = 0;
-            setTimeout(function() {
-                destination.item.style.transition = 'opacity 1s';
-                destination.item.style.opacity = 1;
-            }, 100);
-        },
-        onLeave: function(origin, destination, direction) {
-        }
+        scrollingSpeed: 700,
     });
 
     init();
