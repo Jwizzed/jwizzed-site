@@ -54,7 +54,6 @@ body::before {
     background-color: rgba(26, 42, 58, 0.7);
     z-index: 2;
 }
-
 .section {
     height: 100vh;
     display: flex;
@@ -129,6 +128,20 @@ p {
 .skill-tag:hover {
     transform: scale(1.05);
 }
+.soft-skill-tag {
+    display: inline-block;
+    background-color: #179BAE;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.soft-skill-tag:hover {
+    transform: scale(1.05);
+}
+
 
 .experience-item, .education-item, .project {
     margin-bottom: 1.5rem;
@@ -159,16 +172,23 @@ p {
     text-decoration: underline;
 }
 
-#contact p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
+
+a {
+    color: #3498db; /* Set a base color for all links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
 }
 
-#contact i {
-    margin-right: 0.5rem;
-    color: #3498db;
+a:hover {
+    color: #2980b9; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover for better visibility */
 }
+
+.project-link {
+    margin-right: 1rem; /* Space between project links */
+    font-weight: bold; /* Make project links bold */
+}
+
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {

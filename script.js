@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navigation: true,
         navigationPosition: 'right',
         showActiveTooltip: true,
-        anchors: ['home_', 'about_', 'skills_', 'experience_', 'education_', 'projects_', 'contact_'],
+        anchors: ['home_', 'about_', 'skills_', 'experience_0', 'experience_1', 'education_', 'projects_0', 'projects_1', 'projects_2', 'contact_'],
         scrollingSpeed: 700,
     });
 
