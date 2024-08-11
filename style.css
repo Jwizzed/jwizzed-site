@@ -196,14 +196,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    #model-container, #content-wrapper {
-        width: 100%;
-        position: static;
-    }
     #model-container {
-        height: 50vh;
+        display: none;
     }
-    .section {
-        padding: 1rem;
+    #content-wrapper {
+        width: 100%;
     }
 }
